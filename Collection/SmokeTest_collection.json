@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "d8da59c2-a9b7-471a-97ff-b4ae7735a64a",
+		"name": "SmokeTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "smokeRun",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee8fa335-382f-4e4f-a801-d082e0776b67",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestInfo\": \r\n    {\r\n        \"agent\": \"{{agent}}\", \r\n        \"pcc\": \"{{pcc}}\", \r\n        \"env\": \"{{env}}\", \r\n        \"url\": \"{{url}}\", \r\n        \"soapaction\": \"AirShoppingRQ\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{URL}}:{{PORT}}/smoke/runAllTests",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"smoke",
+						"runAllTests"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

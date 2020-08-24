@@ -1,0 +1,19 @@
+{
+	"id": "8fac65af-0fd9-44ae-af71-257111e9f42a",
+	"name": "Pipeline",
+	"values": [
+		{
+			"key": "URL",
+			"value": "localhost",
+			"enabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "8070",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-08-19T10:07:10.943Z",
+	"_postman_exported_using": "Postman/7.27.0"
+}

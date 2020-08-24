@@ -1,0 +1,21 @@
+{
+  "name": "ndc_sanity_pack",
+  "version": "1.0.0",
+  "description": "This project makes use of the postman collection to form the requests and assertions on the responses.",
+  "main": "script_copy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sanity": "newman run Collection/SmokeTest_collection.json --environment Environment/environment.json --iteration-data Testdata/testdata.csv -r htmlextra --reporter-htmlextra-export ./results/report.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.emirates.com/scm/flxb2b/ndc_sanity_pack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^5.1.2",
+    "newman-reporter-htmlextra": "^1.19.0"
+  }
+}
