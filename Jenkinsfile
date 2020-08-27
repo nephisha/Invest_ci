@@ -53,7 +53,8 @@ timeout(120) {
               container('aat5-runner') {
                 print "======== Installing Dependencies ========"
                 sh "apt update && apt install -y jq"
-                sh "npm install -g csvtojson"
+                sh "npm install -g newman"
+                sh "npm install -g newman-reporter-htmlextra"
                 sh "npm install"
               }
             }
